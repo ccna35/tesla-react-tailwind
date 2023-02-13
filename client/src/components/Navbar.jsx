@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { NavLink, Outlet } from "react-router-dom";
+import Footer from "./Footer";
 import Offcanvas from "./Offcanvas";
 
 export default function Navbar() {
@@ -10,50 +11,44 @@ export default function Navbar() {
   };
 
   return (
-    <>
-      <nav className="py-4 px-8 flex justify-between items-center fixed w-full">
-        <NavLink to="/">
-          <div className="brand w-32">
-            <svg
-              className=""
-              viewBox="0 0 342 35"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M0 .1a9.7 9.7 0 0 0 7 7h11l.5.1v27.6h6.8V7.3L26 7h11a9.8 9.8 0 0 0 7-7H0zm238.6 0h-6.8v34.8H263a9.7 9.7 0 0 0 6-6.8h-30.3V0zm-52.3 6.8c3.6-1 6.6-3.8 7.4-6.9l-38.1.1v20.6h31.1v7.2h-24.4a13.6 13.6 0 0 0-8.7 7h39.9v-21h-31.2v-7h24zm116.2 28h6.7v-14h24.6v14h6.7v-21h-38zM85.3 7h26a9.6 9.6 0 0 0 7.1-7H78.3a9.6 9.6 0 0 0 7 7zm0 13.8h26a9.6 9.6 0 0 0 7.1-7H78.3a9.6 9.6 0 0 0 7 7zm0 14.1h26a9.6 9.6 0 0 0 7.1-7H78.3a9.6 9.6 0 0 0 7 7zM308.5 7h26a9.6 9.6 0 0 0 7-7h-40a9.6 9.6 0 0 0 7 7z"
-                fill="currentColor"
-              ></path>
-            </svg>
-          </div>
+    <nav className="py-4 px-8 flex justify-between items-center fixed w-full">
+      <NavLink to="/">
+        <div className="brand w-32">
+          <svg
+            className=""
+            viewBox="0 0 342 35"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0 .1a9.7 9.7 0 0 0 7 7h11l.5.1v27.6h6.8V7.3L26 7h11a9.8 9.8 0 0 0 7-7H0zm238.6 0h-6.8v34.8H263a9.7 9.7 0 0 0 6-6.8h-30.3V0zm-52.3 6.8c3.6-1 6.6-3.8 7.4-6.9l-38.1.1v20.6h31.1v7.2h-24.4a13.6 13.6 0 0 0-8.7 7h39.9v-21h-31.2v-7h24zm116.2 28h6.7v-14h24.6v14h6.7v-21h-38zM85.3 7h26a9.6 9.6 0 0 0 7.1-7H78.3a9.6 9.6 0 0 0 7 7zm0 13.8h26a9.6 9.6 0 0 0 7.1-7H78.3a9.6 9.6 0 0 0 7 7zm0 14.1h26a9.6 9.6 0 0 0 7.1-7H78.3a9.6 9.6 0 0 0 7 7zM308.5 7h26a9.6 9.6 0 0 0 7-7h-40a9.6 9.6 0 0 0 7 7z"
+              fill="currentColor"
+            ></path>
+          </svg>
+        </div>
+      </NavLink>
+      <div className="products-menu hidden xl:flex gap-8">
+        <div>Model S</div>
+        <div>Model 3</div>
+        <div>Model X</div>
+        <div>Model Y</div>
+        <div>Solar Roof</div>
+        <div>Solar Panels</div>
+      </div>
+      <div className="right-menu hidden xl:flex gap-8">
+        <NavLink to="/shop">
+          <div>Shop</div>
         </NavLink>
-        <div className="products-menu hidden xl:flex gap-8">
-          <div>Model S</div>
-          <div>Model 3</div>
-          <div>Model X</div>
-          <div>Model Y</div>
-          <div>Solar Roof</div>
-          <div>Solar Panels</div>
-        </div>
-        <div className="right-menu hidden xl:flex gap-8">
-          <NavLink to="/shop">
-            <div>Shop</div>
-          </NavLink>
-          <div>Account</div>
-          <div>Menu</div>
-        </div>
-        <div
-          onClick={handleOffCanvas}
-          className="py-1 px-4 bg-slate-300 rounded-md transition hover:bg-slate-400 xl:hidden cursor-pointer"
-        >
-          Menu
-        </div>
-        <Offcanvas offCanvas={offCanvas} setOffCanvas={setOffCanvas} />
-      </nav>
-
-      <main className="overflow-x-hidden overflow-y-scroll w-screen h-screen snap-y snap-mandatory">
-        <Outlet />
-      </main>
-    </>
+        <div>Account</div>
+        <div>Menu</div>
+      </div>
+      <div
+        onClick={handleOffCanvas}
+        className="py-1 px-4 bg-slate-300 rounded-md transition hover:bg-slate-400 xl:hidden cursor-pointer"
+      >
+        Menu
+      </div>
+      <Offcanvas offCanvas={offCanvas} setOffCanvas={setOffCanvas} />
+    </nav>
 
     //     <nav
     //       className="

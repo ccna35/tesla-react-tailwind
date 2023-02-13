@@ -4,11 +4,6 @@ function Offcanvas({ offCanvas, setOffCanvas }) {
       className={`overlay w-screen h-screen flex justify-end absolute top-0 left-0 bg-slate-800 text-white overflow-hidden ${
         !offCanvas && "opacity-0 invisible"
       } transition-all duration-1000 ease-in-out bg-opacity-50 backdrop-blur-sm`}
-      onClick={(e) => {
-        e.currentTarget.classList.contains("group")
-          ? console.log("YES")
-          : console.log("NO");
-      }}
     >
       <div
         className={`group bg-white text-gray-900 w-80 p-4 flex flex-col justify-start transition-all duration-1000 ease-in-out  ${
