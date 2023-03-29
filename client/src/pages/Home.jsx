@@ -12,48 +12,62 @@ export default function Home() {
   return (
     <>
       <section className="w-screen h-screen bg-model3-bg bg-center bg-cover flex flex-col justify-between items-center snap-start">
-        <motion.div className="upper-part text-center mt-24">
-          <motion.h1
+        <div className="upper-part text-center mt-24">
+          <h1
             className="text-6xl"
-            initial={{ opacity: 0, y: 20, visibility: "invisible" }}
-            animate={{ y: -20, opacity: 1, visibility: "visible" }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ y: -20, opacity: 1 }}
             transition={{ duration: 0.5 }}
           >
             Model 3
-          </motion.h1>
-          <motion.p
+          </h1>
+          <p
             className="text-lg"
-            initial={{ opacity: 0, y: 20, visibility: "invisible" }}
-            animate={{ y: -20, opacity: 1, visibility: "visible" }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ y: -20, opacity: 1 }}
             transition={{ delay: 0.5, duration: 0.5 }}
           >
             Leasing starting at $349/mo
-          </motion.p>
-        </motion.div>
+          </p>
+        </div>
         <div className="bottom-part flex gap-4 flex-col sm:flex-row mb-24">
-          <motion.button
+          <button
             className="px-16 py-2 rounded-sm bg-slate-800 text-white"
             initial={{ x: -30, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 1 }}
           >
             Custom Order
-          </motion.button>
-          <motion.button
+          </button>
+          <button
             className="px-16 py-2 rounded-sm bg-white text-gray-600"
             initial={{ x: 30, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 1 }}
           >
             Demo Drive
-          </motion.button>
+          </button>
         </div>
       </section>
       <section className="w-screen h-screen bg-modelY-bg bg-center bg-cover flex flex-col justify-between items-center snap-start">
-        <motion.div className="upper-part text-center mt-24">
-          <h1 className="text-6xl ">Model Y</h1>
-          <p className="text-lg">Leasing starting at $349/mo</p>
-        </motion.div>
+        <div className="upper-part text-center mt-24">
+          <h1
+            className="text-6xl"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ y: -20, opacity: 1 }}
+            transition={{ duration: 0.5 }}
+          >
+            Model Y
+          </h1>
+          <p
+            className="text-lg"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ y: -20, opacity: 1 }}
+            transition={{ delay: 0.5, duration: 0.5 }}
+          >
+            Leasing starting at $349/mo
+          </p>
+        </div>
         <div className="bottom-part flex gap-4 flex-col sm:flex-row mb-24">
           <button className="px-16 py-2 rounded-sm bg-slate-800 text-white">
             Custom Order

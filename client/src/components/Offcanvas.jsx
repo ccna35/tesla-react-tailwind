@@ -6,6 +6,10 @@ function Offcanvas({ offCanvas, setOffCanvas }) {
       } transition-all duration-1000 ease-in-out bg-opacity-50 backdrop-blur-sm`}
     >
       <div
+        className="backdropx w-screen h-screen bg-slate-400 absolute -z-10 backdrop-blur-sm opacity-10"
+        onClick={() => setOffCanvas((prev) => !prev)}
+      ></div>
+      <div
         className={`group bg-white text-gray-900 w-80 p-4 flex flex-col justify-start transition-all duration-1000 ease-in-out  ${
           !offCanvas && "translate-x-full"
         }`}
